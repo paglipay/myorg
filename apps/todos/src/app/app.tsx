@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Todo } from '@myorg/data';
 import { Todos } from '@myorg/ui';
+import { Button } from 'react-bootstrap';
+
 const App = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -25,9 +27,9 @@ const App = () => {
     <>
       <h1>Todos</h1>      
       <Todos todos={todos} />
-      <button id={'add-todo'} onClick={addTodo}>
+      <Button id={'add-todo'} onClick={addTodo}>
         Add Todo
-      </button>
+      </Button>
     </>
   );
 };
