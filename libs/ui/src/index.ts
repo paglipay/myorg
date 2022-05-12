@@ -1,3 +1,4 @@
+export * from './lib/product-purchase-card/product-purchase-card';
 export * from './lib/layout/layout';
 export * from './lib/product-images/product-images';
 export * from './lib/product-crousel/product-crousel';

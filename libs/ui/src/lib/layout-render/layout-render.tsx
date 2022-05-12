@@ -3,7 +3,7 @@ import React, { useState, useEffect, lazy } from 'react';
 // import DLayout from "./DLayout";
 import { DLayout } from '@myorg/ui';
 import { Container } from 'react-bootstrap';
-import { ProductCrousel } from '@myorg/ui';
+import { ProductCrousel, ProductPurchaseCard } from '@myorg/ui';
 /* eslint-disable-next-line */
 export interface LayoutRenderProps {
   fluid: boolean;
@@ -17,9 +17,13 @@ export interface LayoutRenderProps {
 export function LayoutRender(props: LayoutRenderProps) {
   const components = {
     ProductCrousel: ProductCrousel,
+    ProductPurchaseCard: ProductPurchaseCard,
   };
+  // const result = props.featureTypesArry.map((e) =>
+  //   React.createElement(components['ProductPurchaseCard'], { cols: [3, 3, 3, 3] })
+  // );
   const result = props.featureTypesArry.map((e) =>
-    React.createElement(components['ProductCrousel'], { cols: [3, 3, 3, 3] })
+    React.createElement(components['ProductPurchaseCard'], { title: 'Real' })
   );
 
   return (
@@ -27,7 +31,7 @@ export function LayoutRender(props: LayoutRenderProps) {
       fluid={props.fluid}
       // style={{ backgroundColor: 'white', padding: '25px', marginBottom: '25px' }}
     >
-      <DLayout cols={['3', '3', '3']} features={result} />
+      <DLayout cols={['3', '3']} features={result} />
     </Container>
   );
 }
