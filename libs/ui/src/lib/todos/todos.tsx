@@ -1,17 +1,17 @@
 import { Todo } from '@myorg/data';
 import './todos.module.css';
-
+import { Table } from 'react-bootstrap';
 export interface TodosProps {
   todos: Todo[];
 }
 
 export function Todos(props: TodosProps) {
   return (
-    <ul>
+    <Table>
       {props.todos.map((t) => (
-        <li className={'todo'}>{t.title}</li>
+        <tr className={'todo'}><td>{t.title}</td></tr>
       ))}
-    </ul>
+    </Table>
   );
 }
 
