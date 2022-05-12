@@ -3,7 +3,7 @@
 import { Col, Row } from 'react-bootstrap';
 /* eslint-disable-next-line */
 export interface DLayoutProps {
-  cols: number[];
+  cols: string[];
   features: any[];
 }
 
